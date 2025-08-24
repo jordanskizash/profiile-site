@@ -1,10 +1,17 @@
+import { ThemeToggle } from "@/components/theme-toggle"
+
 export default function Home() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
-      {/* Header */}
+      {/* Header with Theme Toggle */}
+      <div className="flex justify-between items-center mb-16">
+        <h1 className="text-4xl font-bold">Jordan Steinberg</h1>
+        <ThemeToggle />
+      </div>
+      
+      {/* Description */}
       <div className="mb-16">
-        <h1 className="text-4xl font-bold mb-6">Jordan Steinberg</h1>
-        <p className="text-lg text-gray-300 leading-relaxed max-w-3xl">
+        <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
           Technology Enthusiast - Application Modernization and IT Automation Specialist at IBM. I write about Python
           development, web technologies, data processing, and growth systems of leading technology companies.
         </p>
@@ -51,9 +58,9 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
             >
-              Wiz - Growth Systems Analysis
+              Wiz
             </a>
-            <p className="text-gray-400 mt-1">Exploring the growth systems behind Wiz's rapid expansion.</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">Exploring the growth systems behind Wiz's rapid expansion.</p>
           </div>
 
           <div>
@@ -65,7 +72,7 @@ export default function Home() {
             >
               Stripe: How the Internet's Favorite Payment Platform Grew
             </a>
-            <p className="text-gray-400 mt-1">Deep dive into Stripe's growth strategy and systems.</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">Deep dive into Stripe's growth strategy and systems.</p>
           </div>
         </div>
       </section>
@@ -83,10 +90,10 @@ export default function Home() {
             >
               NextJS: Using Stripe to build a credit system for your SaaS App
             </a>
-            <p className="text-gray-400 mt-1">
+            <p className="text-gray-600 dark:text-gray-400 mt-1">
               If you're building a Web App, chances are you've already thought about how you're going to monetize it.
             </p>
-            <p className="text-gray-500 text-sm mt-2">Medium • Nov 21, 2024</p>
+            <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">Medium • Nov 21, 2024</p>
           </article>
 
           <article>
@@ -98,11 +105,11 @@ export default function Home() {
             >
               Batch Processing vs Event Streaming
             </a>
-            <p className="text-gray-400 mt-1">
+            <p className="text-gray-600 dark:text-gray-400 mt-1">
               As data becomes increasingly important to modern business, organizations are tasked with finding the most
               efficient and effective way to process it.
             </p>
-            <p className="text-gray-500 text-sm mt-2">Medium • Mar 12, 2024</p>
+            <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">Medium • Mar 12, 2024</p>
           </article>
         </div>
       </section>
@@ -120,8 +127,8 @@ export default function Home() {
             >
               Python: Create a Program to Read Text from Images
             </a>
-            <p className="text-gray-400 mt-1">An awesome way to copy text from images with one line of python code.</p>
-            <p className="text-gray-500 text-sm mt-2">FAUN.dev • Dec 12, 2021</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">An awesome way to copy text from images with one line of python code.</p>
+            <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">FAUN.dev • Dec 12, 2021</p>
           </article>
 
           <article>
@@ -133,11 +140,11 @@ export default function Home() {
             >
               Python: Adding Features To Your Stock Market Dashboard With Plotly
             </a>
-            <p className="text-gray-400 mt-1">
+            <p className="text-gray-600 dark:text-gray-400 mt-1">
               Adding advanced features to your stock market data visualization with interactive charts and real-time
               updates.
             </p>
-            <p className="text-gray-500 text-sm mt-2">Medium • Nov 30, 2021</p>
+            <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">Medium • Nov 30, 2021</p>
           </article>
 
           <article>
@@ -149,11 +156,11 @@ export default function Home() {
             >
               Python: Build a Program to Retrieve and Graph Live Stock Market Data
             </a>
-            <p className="text-gray-400 mt-1">
+            <p className="text-gray-600 dark:text-gray-400 mt-1">
               Utilizing the new yahoo finance API to write a program that will retrieve live stock market data and
               display it.
             </p>
-            <p className="text-gray-500 text-sm mt-2">Medium • Nov 25, 2021</p>
+            <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">Medium • Nov 25, 2021</p>
           </article>
 
           <article>
@@ -165,10 +172,10 @@ export default function Home() {
             >
               Web Development: Embed Visualization of Satellites in Orbit with 1 line of code
             </a>
-            <p className="text-gray-400 mt-1">
+            <p className="text-gray-600 dark:text-gray-400 mt-1">
               How to embed a visualization of all satellites in orbit into your HTML page with just one line of code.
             </p>
-            <p className="text-gray-500 text-sm mt-2">Medium • Dec 6, 2021</p>
+            <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">Medium • Dec 6, 2021</p>
           </article>
         </div>
       </section>
@@ -184,9 +191,9 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
             >
-              CitrusReach
+              Citrus Reach
             </a>
-            <p className="text-gray-400 mt-1">A platform to help sales people improve their outreach with video</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">A platform to help sales people improve their outreach with video</p>
           </div>
 
           <div>
@@ -198,7 +205,7 @@ export default function Home() {
             >
               Live Market Data Plot
             </a>
-            <p className="text-gray-400 mt-1">Get live market data and visualize it using Python and Plotly</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">Get live market data and visualize it using Python and Plotly</p>
           </div>
 
           <div>
@@ -210,7 +217,7 @@ export default function Home() {
             >
               Simple Profile Project
             </a>
-            <p className="text-gray-400 mt-1">A nice-looking, functional profile website for web developers</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">A nice-looking, functional profile website for web developers</p>
           </div>
 
           <div>
@@ -222,7 +229,7 @@ export default function Home() {
             >
               Next.js Dashboard
             </a>
-            <p className="text-gray-400 mt-1">Dashboard from the Next.js learning course from Vercel</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">Dashboard from the Next.js learning course from Vercel</p>
           </div>
         </div>
       </section>
