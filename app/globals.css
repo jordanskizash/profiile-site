@@ -137,5 +137,5 @@
 }
 
 .animate-crystallize {
-  animation: crystallize .6s linear forwards;
+  animation: crystallize .6s ease-out forwards;
 }
