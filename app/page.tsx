@@ -1,55 +1,49 @@
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
+import BlackWhiteBlobs from "@/components/home-animation"
+import { SocialLinks } from "@/components/social-links"
 
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-16">
-      {/* Header with Theme Toggle */}
-      <div className="flex justify-between items-center mb-16">
-        <h1 className="text-4xl font-bold">Jordan Steinberg</h1>
+    <div className="relative min-h-screen px-6 py-12 md:py-20 animate-crystallize">
+      {/* Theme Toggle - Fixed Top Right */}
+      <div className="absolute top-8 right-8">
         <ThemeToggle />
       </div>
 
-      {/* Description */}
-      <div className="mb-16">
-        <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
-          Technology Enthusiast - Application Modernization and IT Automation Specialist at IBM. I write about Python
-          development, web technologies, data processing, and growth systems of leading technology companies.
-        </p>
-      </div>
+      {/* Main Content Grid */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        {/* Left Column - Content */}
+        <div className="space-y-12">
+          {/* Name */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            Jordan Steinberg
+          </h1>
 
-      {/* Social Links */}
-      <div className="mb-16">
-        <div className="flex gap-8 text-blue-400">
-          <a
-            href="https://medium.com/@jsteinb"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-300 transition-colors"
-          >
-            Medium
-          </a>
-          <a
-            href="https://jordansteinberg.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-300 transition-colors"
-          >
-            Substack
-          </a>
-          <a
-            href="https://github.com/jordanskizash"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-300 transition-colors"
-          >
-            GitHub
-          </a>
+          {/* Bio/Description */}
+          <div className="space-y-4">
+            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+              I'm on the GTM team at {" "}
+              <a href="https://www.dash0.com/" className="text-orange-500 underline hover:text-orange-600">Dash0</a>, 
+              helping build the leading AI and OpenTelemetry-native observability platform. My writing and projects usually have to do with technology, data visualization, or web development. Formerly at IBM. Based in Chicago.
+            </p>
+          </div>
+
+          {/* Social Links */}
+          <SocialLinks />
+        </div>
+
+        {/* Right Column - Animation */}
+        <div className="flex items-center justify-center lg:justify-end">
+          <div className="w-full max-w-md aspect-square rounded-lg overflow-hidden shadow-2xl">
+            <BlackWhiteBlobs />
+          </div>
         </div>
       </div>
 
-      {/* Tabs */}
-      <Tabs defaultValue="writing" className="w-full">
+      {/* Tabs Section - Full Width Below Hero */}
+      <div className="max-w-7xl mx-auto mt-20">
+        <Tabs defaultValue="writing" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="writing">Writing</TabsTrigger>
           <TabsTrigger value="projects">Projects</TabsTrigger>
@@ -257,6 +251,7 @@ export default function Home() {
           </div>
         </TabsContent>
       </Tabs>
+      </div>
     </div>
   )
 }
