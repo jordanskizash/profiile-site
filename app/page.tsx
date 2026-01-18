@@ -23,8 +23,8 @@ export default function Home() {
           {/* Bio/Description */}
           <div className="space-y-4">
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-              I'm on the GTM team at {" "}
-              <a href="https://www.dash0.com/" className="text-orange-500 underline hover:text-orange-600">Dash0</a>, 
+              I&apos;m on the GTM team at {" "}
+              <a href="https://www.dash0.com/" className="text-orange-500 underline hover:text-orange-600">Dash0</a>,
               helping build the leading AI and OpenTelemetry-native observability platform. My writing and projects usually have to do with technology, data visualization, or web development. Formerly at IBM. Based in Chicago.
             </p>
           </div>
