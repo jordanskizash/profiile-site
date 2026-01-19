@@ -6,13 +6,15 @@ import { SocialLinks } from "@/components/social-links"
 export default function Home() {
   return (
     <div className="relative min-h-screen px-6 py-12 md:py-20 animate-crystallize">
-      {/* Theme Toggle - Fixed Top Right */}
-      <div className="absolute top-8 right-8">
-        <ThemeToggle />
-      </div>
+      {/* Main Container */}
+      <div className="max-w-7xl mx-auto">
+        {/* Theme Toggle */}
+        <div className="flex justify-end mb-8">
+          <ThemeToggle />
+        </div>
 
-      {/* Main Content Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         {/* Left Column - Content */}
         <div className="space-y-12">
           {/* Name */}
@@ -39,11 +41,11 @@ export default function Home() {
             <BlackWhiteBlobs />
           </div>
         </div>
-      </div>
+        </div>
 
-      {/* Tabs Section - Full Width Below Hero */}
-      <div className="max-w-7xl mx-auto mt-20">
-        <Tabs defaultValue="writing" className="w-full">
+        {/* Tabs Section - Full Width Below Hero */}
+        <div className="mt-20">
+          <Tabs defaultValue="writing" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="writing">Writing</TabsTrigger>
           <TabsTrigger value="projects">Projects</TabsTrigger>
@@ -250,7 +252,8 @@ export default function Home() {
             </div>
           </div>
         </TabsContent>
-      </Tabs>
+        </Tabs>
+        </div>
       </div>
     </div>
   )
