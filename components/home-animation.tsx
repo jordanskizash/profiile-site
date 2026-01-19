@@ -84,8 +84,11 @@ const BlackWhiteBlobs: React.FC = () => {
     return () => observer.disconnect();
   }, [theme]);
 
-  const BACKGROUND_COLOR = isDark ? '#1a1a1a' : '#F0EEE6';
-  const TEXT_COLOR = isDark ? '#e0e0e0' : '#333';
+//   const BACKGROUND_COLOR = isDark ? '#1a1a1a' : '#F0EEE6';
+//   const TEXT_COLOR = isDark ? '#e0e0e0' : '#333';
+
+  const BACKGROUND_COLOR = isDark ? '#F0EEE6' : '#1a1a1a';
+  const TEXT_COLOR = isDark ? '#333' : '#e0e0e0';
   
   useEffect(() => {
     let animationId: number;
