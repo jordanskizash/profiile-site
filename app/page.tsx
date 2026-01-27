@@ -1,9 +1,13 @@
+'use client'
+
+import { useState } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import BlackWhiteBlobs from "@/components/home-animation"
 import { SocialLinks } from "@/components/social-links"
+import LiquidNav from "@/components/liquid-nav"
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState('writing')
   return (
     <div className="relative min-h-screen px-6 py-12 md:py-20 animate-crystallize">
       {/* Main Container */}
@@ -43,15 +47,22 @@ export default function Home() {
         </div>
         </div>
 
-        {/* Tabs Section - Full Width Below Hero */}
+        {/* Navigation Section */}
         <div className="mt-20">
-          <Tabs defaultValue="writing" className="w-full">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="writing">Writing</TabsTrigger>
-          <TabsTrigger value="projects">Projects</TabsTrigger>
-        </TabsList>
+          <div className="flex justify-center mb-8">
+            <LiquidNav
+              items={[
+                { id: 'writing', label: 'Writing' },
+                { id: 'projects', label: 'Projects' }
+              ]}
+              activeItem={activeTab}
+              onItemClick={setActiveTab}
+            />
+          </div>
 
-        <TabsContent value="writing" className="mt-6">
+          {/* Writing Content */}
+          {activeTab === 'writing' && (
+          <div className="mt-6">
           <div className="space-y-6">
             {/* Newsletter Articles */}
             <div>
@@ -171,10 +182,13 @@ export default function Home() {
               <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">Medium • Dec 6, 2021</p>
             </article>
           </div>
-        </TabsContent>
+          </div>
+          )}
 
-        <TabsContent value="projects" className="mt-6">
-          <div className="space-y-8">
+          {/* Projects Content */}
+          {activeTab === 'projects' && (
+          <div className="mt-6">
+            <div className="space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               <div>
                 <a
@@ -250,9 +264,9 @@ export default function Home() {
                 <span className="text-gray-500 dark:text-gray-400 text-sm">Preview Coming Soon</span>
               </div>
             </div>
+            </div>
           </div>
-        </TabsContent>
-        </Tabs>
+          )}
         </div>
       </div>
     </div>
