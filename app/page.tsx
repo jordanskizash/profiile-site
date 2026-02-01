@@ -5,6 +5,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import BlackWhiteBlobs from "@/components/home-animation"
 import { SocialLinks } from "@/components/social-links"
 import LiquidNav from "@/components/liquid-nav"
+import { ContactForm } from "@/components/contact-form"
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('writing')
@@ -53,7 +54,8 @@ export default function Home() {
             <LiquidNav
               items={[
                 { id: 'writing', label: 'Writing' },
-                { id: 'projects', label: 'Projects' }
+                { id: 'projects', label: 'Projects' },
+                { id: 'contact', label: 'Contact' }
               ]}
               activeItem={activeTab}
               onItemClick={setActiveTab}
@@ -265,6 +267,17 @@ export default function Home() {
               </div>
             </div>
             </div>
+          </div>
+          )}
+
+          {/* Contact Content */}
+          {activeTab === 'contact' && (
+          <div className="mt-6">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">Get in Touch</h2>
+              <p className="text-gray-600 dark:text-gray-400">Have a question or want to work together? Send me a message.</p>
+            </div>
+            <ContactForm />
           </div>
           )}
         </div>
