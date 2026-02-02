@@ -23,7 +23,7 @@ export default function Home() {
         {/* Left Column - Content */}
         <div className="space-y-12">
           {/* Name */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
             Jordan Steinberg
           </h1>
 
